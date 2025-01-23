@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+    <name>purepursuit</name>
+    <version>1.0.0</version>
+    <description>C++/ROS2 porting of the ros_pp.py node, which implements a simple pure pursuit control.</description>
+    <maintainer email="f.gavioli97@gmail.com">Federico Gavioli</maintainer>
+
+    <license>TODO</license>
+
+    <depend>adx_data</depend>
+    <depend>adx_data_ros</depend>
+
+    <depend>adx_curve</depend>
+    <depend>rclcpp</depend>
+    <depend>std_msgs</depend>
+    <depend>geometry_msgs</depend>
+    <depend>nav_msgs</depend>
+    <depend>adx_msgs</depend>
+
+    <test_depend>ament_lint_auto</test_depend>
+    <test_depend>ament_lint_common</test_depend>
+
+    <export>
+        <build_type>ament_cmake</build_type>
+    </export>
+</package>

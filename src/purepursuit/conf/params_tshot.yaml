@@ -1,0 +1,23 @@
+# Launch mode
+# 0 = single global path
+# 1 = frenet local path
+launch_mode: 0
+
+# Algorithm tunables
+max_speed:           5.00  # [m/s] Maximum output speed
+min_speed:           3.00  # [m/s] Minimum output speed
+speed_scale_factor:  0.9 # [%] Scale factor multiplying the target speed
+look_ahead:          1.4   # [m] Currently unused, it will replace the min and max lookaheads soon
+look_forward_gain:   0.00  # [/] Steering smoothing factor (the old pp_k)
+accel_max:           4.0   # [m/s^2] Maximum acceleration
+
+# Vehicle-related parameters
+max_steer:           0.45  # Maximum steer left
+min_steer:          -0.45  # Maximum steer right
+wheel_base:          0.325 # distance between front and rear wheels
+
+look_ahead_init:     1.4   # [TO BE REMOVED SOON™]
+look_ahead_min:      1.4   # [TO BE REMOVED SOON™]
+look_ahead_max:      1.4   # [TO BE REMOVED SOON™]
+curvature_min:       0.0   # [TO BE REMOVED SOON™]
+curvature_max:       0.9   # [TO BE REMOVED SOON™]

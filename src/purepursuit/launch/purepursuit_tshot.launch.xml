@@ -1,0 +1,19 @@
+<launch>
+  <node pkg="purepursuit" exec="purepursuit_node" output="screen" >
+
+    <!-- sub topics -->
+    <remap from="/odom" to="/thundershot/pf/position"/>
+    <remap from="/scan" to="/scan"/>
+    <remap from="/path_to_follow" to="/path_to_follow"/>
+
+    <!-- pub topics -->
+    <remap from="/drive_parameters" to="/none"/>
+    <remap from="/drive_mux" to="/drive_mux"/>
+    <remap from="/pp/act_pos" to="/pp/act_pos"/>
+    <remap from="/pp/goal" to="/pp/goal"/>
+
+    <!-- params file -->
+    <param name="params_file" value="$(find-pkg-share purepursuit)/conf/params_tshot.yaml" />
+    <param name="fixed_frame" value="map" />
+  </node>
+</launch>
