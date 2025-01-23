@@ -55,7 +55,7 @@ Thundershot is our main FPGA-based embedded research platform, which is also equ
 ## Autonomous stack
 This repository acts as a proof-of-concept software stack to drive scaled autonomous vehicles. It's split into several independent modules, each one implementing a specific functionality of the autonomous vehicle.
 
-* [**`vehicle`**](src/vehicle/README.md) - vehicle description files, transformation fixed frames and support files related to each vehicle
+* [**`vehicles`**](src/vehicles) - vehicle description files, transformation fixed frames and support files related to each vehicle
 * [**`adx_data`**](src/adx_data/README.md) - a lightweight and low-dependency library for handling data structures commonly used in autonomous driving
 * [**`adx_data_ros`**](src/adx_data_ros/README.md) - ROS2 wrappers for adx_data types
 * [**`adx_msgs`**](src/adx_msgs/README.md) - Custom ROS2 transport messages definitions
