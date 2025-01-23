@@ -1,0 +1,21 @@
+<launch>
+  <node pkg="purepursuit" exec="purepursuit_node" output="screen" >
+
+    <!-- sub topics -->
+    <remap from="/commands/stop" to="/commands/stop"/>
+    <remap from="/odom" to="/Odometry"/>
+    <remap from="/scan" to="/scan"/>
+    <remap from="/drive_act" to="/drive_act"/>
+    <remap from="/path_to_follow" to="/path_to_follow"/>
+
+    <!-- pub topics -->
+    <remap from="/drive_parameters" to="/drive_parameters"/>
+    <remap from="/pp/path" to="/pp/path"/>
+    <remap from="/pp/act_pos" to="/pp/act_pos"/>
+    <remap from="/pp/goal" to="/pp/goal"/>
+
+    <!-- params file -->
+    <param name="params_file" value="$(find-pkg-share purepursuit)/conf/params_carla.yaml" />
+    <param name="fixed_frame" value="map" />
+  </node>
+</launch>
