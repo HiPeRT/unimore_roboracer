@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="path_publisher" exec="path_publisher_node" name="path_publisher_node" output="screen">
+        <param name="filename" value="$(find-pkg-share path_logger)/../../../../logged_trj.csv"/>
+        <!-- path_mode bitmask:
+            1: adx plan
+            2: ros standard path
+            4: binary
+        -->
+        <param name="path_mode" value="6" />
+        <param name="binary_file" value="$(find-pkg-share path_logger)/../../../../logged_trj.bin" />
+        <param name="fixed_frame" value="camera_init" />
+
+        <remap from="/path" to="/path" />
+        <remap from="/plan" to="/plan" />
+    </node>
+</launch>

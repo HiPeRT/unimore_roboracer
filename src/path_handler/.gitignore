@@ -1,0 +1,17 @@
+# vscode files
+.vscode
+
+# cmake
+build
+
+# colcon
+install
+log
+
+# catkin
+devel
+logs
+.catkin_tools
+
+# doxygen
+doc_output
