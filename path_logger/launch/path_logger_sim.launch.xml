@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node pkg="path_logger" exec="path_logger_node" name="path_logger_node" output="screen" >
+        <param name="sensor_mode" value="0" /><!-- 0: Odometry, 1: Odometry no speed, 2: NavSatFix, 3: GPSFix-->
+        <param name="path_mode" value="0" /><!-- 0: Plan, 1: Trajectory, 2: Billboards-->
+        <param name="filename" value="$(find-pkg-share path_logger)/logged.trj"/>
+
+        <remap from="/gps" to="/novatel_gps" />
+        <remap from="/odom_pos" to="/ego_racecar/odom" />
+        <remap from="/odom_vel" to="/ego_racecar/odom" />
+    </node>
+</launch>

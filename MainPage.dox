@@ -1,0 +1,8 @@
+/**
+ * @mainpage path_handler: ROS nodes for path manipulation
+ *
+ * path_handler comprises two nodes:
+ * - \link path_logger \endlink
+ * - \link path_publisher \endlink
+ *
+ */

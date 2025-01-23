@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <param name="sensor_mode" value="0" /><!-- 0: Odometry, 1: Odometry no speed, 2: NavSatFix, 3: GPSFix-->
+    <param name="path_mode" value="1" /><!-- 0: Plan, 1: Trajectory, 2: Billboards-->
+    <param name="filename" value="$(find path_logger)/../../../logged_trj.csv"/>
+    <node name="path_logger_node" pkg="path_logger" type="path_logger_node" output="screen">
+
+        <remap from="/gps" to="/novatel_gps" />
+        <remap from="/odom_pos" to="/Odometry" />
+        <remap from="/odom_vel" to="/Odometry" />
+    </node>
+</launch>
