@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="map_name" default="icra_ext" />
+
+    <node pkg="particle_filter" exec="particle_filter_node" name="particle_filter" output="screen">
+        <!-- sub topics -->
+        <remap from="/map" to="/map"/>
+        <remap from="/initialpose" to="/initialpose"/>
+        <remap from="/odom" to="/ego_racecar/odom"/>
+        <remap from="/scan" to="/scan"/>
+
+        <!-- pub topics -->
+        <remap from="/thundershot/pf/position" to="/thundershot/pf/positionDBG"/>
+        <remap from="/thundershot/pf/particles" to="/thundershot/pf/particlesDBG"/>
+
+        <!-- configurations -->
+        <param name="conf_path" value="$(find-pkg-share particle_filter)/conf/particle.yaml"/>
+        <param name="numRaysDs" value="60"/>
+        <param name="ekf_conf_path" value="$(find-pkg-share particle_filter)/conf/ekf.yaml"/>
+    </node>
+
+    <!-- Launch map server -->
+    <node pkg="nav2_map_server" exec="map_server" name="map_server" >
+        <param name="yaml_filename" value="$(find-pkg-share maps)/$(var map_name)/map.yaml" />
+    </node>
+
+    <node pkg="nav2_util" exec="lifecycle_bringup" name="lifecycle_bringup" args="map_server" />
+</launch>
