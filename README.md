@@ -76,7 +76,8 @@ We gladly welcome contributions from the community
 - You want to contribute something (small or big) to the project? Feel free to fork the repository and open a pull request on this repository. Please provide a clear description of your changes and/or how they affect the codebase. We will review your pull request and provide feedback as needed
 
 ## Cite
-If you use the code in this repository for your research, please consider citing one or more of the following works:
+If you use the code in this repository or our work is relevant to your research, please consider citing one or more of the following works:
+
 <details>
 <summary><a href="https://doi.org/10.23919/DATE58400.2024.10546748">Adaptive Localization for Autonomous Racing Vehicles with Resource-Constrained Embedded Platforms</a></summary>
 
