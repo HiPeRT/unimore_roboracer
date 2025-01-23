@@ -1,0 +1,6 @@
+.vscode/
+build/
+doc_output/
+install/
+log/
+Testing/

@@ -1,0 +1,8 @@
+/**
+ * @mainpage adx_data: Data structures and methods to abstract from ros
+ *
+ * adx_data is comprised of several classes:
+ * - \link adx::data::Covariance \endlink
+ * - \link adx::data::Obstacle \endlink
+ *
+ */
