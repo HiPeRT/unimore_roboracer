@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="map_name" default="datacenter" />
+
+    <node pkg="path_publisher" exec="path_publisher_node" name="path_publisher_node" output="screen">
+        <param name="filename" value="$(find-pkg-share maps)/$(var map_name)/opt.trj"/>
+        <!-- path_mode bitmask:
+            1: adx plan
+            2: ros standard path
+            4: binary
+        -->
+        <param name="path_mode" value="3" />
+        <param name="fixed_frame" value="map" />
+
+        <remap from="/path" to="/path" />
+        <remap from="/plan" to="/plan" />
+    </node>
+</launch>

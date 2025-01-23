@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="bud">
+    <xacro:include filename="$(find kitt_description)/model/urdf/materials.urdf.xacro" />
+    <xacro:include filename="$(find kitt_description)/model/urdf/base/base.urdf.xacro" />
+    <xacro:include filename="$(find kitt_description)/model/urdf/sensors/zed.urdf.xacro" /> 
+    <xacro:include filename="$(find kitt_description)/model/urdf/sensors/lidar.urdf.xacro" />
+    <xacro:include filename="$(find kitt_description)/model/urdf/sensors/imu.urdf.xacro" />
+
+    <xacro:property name="length" value="0.38"/>
+    <xacro:property name="width" value="0.195"/>
+    <xacro:property name="height" value="0.09"/>
+
+    <xacro:property name="zed_length" value="0.03"/>
+    <xacro:property name="zed_width" value="0.17"/>
+    <xacro:property name="zed_height" value="0.03"/>
+
+    <xacro:property name="lidar_height" value="0.07"/>
+    <xacro:property name="lidar_radius" value="0.02"/>
+
+    <!-- base -->
+    <xacro:car_base name="base" />
+    <!-- zed   -->
+    <xacro:car_zed name="zed" parent="base_link">
+        <origin xyz="${length/2} 0.0 ${height - zed_height/2}"
+                rpy="0.0 0.0 0.0"/>
+    </xacro:car_zed>
+
+
+    <!-- lidar -->
+    <xacro:car_lidar name="lidar" parent="base_link">
+        <origin xyz="${length/2 - zed_height/2} 0 ${height + lidar_height/2}" />
+    </xacro:car_lidar>
+    <!-- imu -->
+    <xacro:car_imu name="imu" parent="base_link">
+        <origin xyz="${length/4} 0 ${height - zed_height/2}"/>
+    </xacro:car_imu>
+</robot>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="car_base" params="name">
+        <link name="${name}_link">
+            <visual name="">
+                <origin xyz="-${length/2} 0.0 ${height/2}" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <mesh filename="package://kitt_description/model/meshes/chassis.stl" scale="1.0 1.0 1.0"/>
+                </geometry>
+                <!--
+                <geometry>
+                    <box size="${length} ${width} ${height}"/>
+                </geometry>
+                -->
+                <material name="Grey" />
+            </visual>
+        </link>
+
+        <link name="${name}_footprint">
+            <visual name="">
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <geometry>
+                    <box size="0.01 0.01 0.01"/>
+                </geometry>
+            </visual>
+        </link>
+        <joint name="${name}_footprint_joint" type="fixed">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <child link="${name}_link"/>
+            <parent link="${name}_footprint"/>
+        </joint>
+    </xacro:macro>
+
+</robot>

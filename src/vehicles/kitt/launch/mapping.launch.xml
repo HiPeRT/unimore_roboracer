@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find-pkg-share slam_toolbox)/launch/online_async_launch.py" >
+    <arg name="params_file" value="$(find-pkg-share kitt)/config/slam_toolbox.yaml" />
+  </include>
+</launch>

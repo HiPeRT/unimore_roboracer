@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="map_name" default="datacenter" />
+
+    <node pkg="particle_filter" exec="particle_filter_node" name="particle_filter" output="screen">
+        <!-- subscribers -->
+        <remap from="/map" to="/map"/>
+        <remap from="/initialpose" to="/initialpose"/>
+        <remap from="/odom" to="/odom"/>
+        <remap from="/scan" to="/scan"/>
+
+        <!-- publishers -->
+        <remap from="/pf/pose" to="/pf/pose"/>
+        <remap from="/pf/particles" to="/pf/particles"/>
+
+        <!-- configurations -->
+        <param name="conf_path" value="$(find-pkg-share kitt)/conf/particle.yaml"/>
+        <param name="numRaysDs" value="60"/>
+    </node>
+</launch>

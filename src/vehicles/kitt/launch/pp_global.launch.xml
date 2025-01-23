@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find-pkg-share kitt)/launch/particle.launch.xml"/>
+  <include file="$(find-pkg-share kitt)/launch/purepursuit.launch.xml"/>
+
+  <include file="$(find-pkg-share kitt)/launch/map_server.launch.py"/>
+  <include file="$(find-pkg-share kitt)/launch/path_publisher.launch.xml"/>
+</launch>

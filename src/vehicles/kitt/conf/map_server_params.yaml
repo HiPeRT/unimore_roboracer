@@ -1,0 +1,18 @@
+car/map_server:
+  ros__parameters:
+    topic_name: "map"
+    frame_id: "map"
+
+map_saver:
+  ros__parameters:
+    save_map_timeout: 5.0
+    free_thresh_default: 0.25
+    occupied_thresh_default: 0.65
+
+costmap_filter_info_server:
+  ros__parameters:
+    type: 1
+    filter_info_topic: "costmap_filter_info"
+    mask_topic: "filter_mask"
+    base: 0.0
+    multiplier: 0.25
