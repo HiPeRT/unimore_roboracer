@@ -1,0 +1,6 @@
+@PACKAGE_INIT@
+
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_MODULE_PATH})
+
+find_package(Eigen3 REQUIRED)
+include("${CMAKE_CURRENT_LIST_DIR}/adx_dataTargets.cmake")
