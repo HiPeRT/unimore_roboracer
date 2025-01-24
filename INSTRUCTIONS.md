@@ -18,7 +18,7 @@ The ROS2 framework is used as the main data transfer and abstraction middleware 
 #### ROS2 dependencies
 Our stack relies on multiple additional ROS2 dependencies, can install them via apt with
 ```bash
-sudo apt install libyaml-cpp-dev ros-foxy-nav2-map-server ros-foxy-ackermann-msgs ros-foxy-tf2 ros-foxy-tf2-eigen ros-foxy-tf2-ros ros-foxy-nav2-msgs python3-colcon-common-extensions ros-foxy-gps-msgs ros-foxy-xacro ros-foxy-joint-state-publisher
+sudo apt install libyaml-cpp-dev ros-foxy-nav2-map-server ros-foxy-ackermann-msgs ros-foxy-tf2 ros-foxy-tf2-eigen ros-foxy-tf2-ros ros-foxy-nav2-msgs python3-colcon-common-extensions ros-foxy-gps-msgs ros-foxy-xacro ros-foxy-joint-state-publisher ros-foxy-nav2-lifecycle-manager
 ```
 
 #### Additional non-ROS dependencies
