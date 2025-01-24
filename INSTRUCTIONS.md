@@ -69,12 +69,6 @@ ros2 launch kitt pp_global.launch.py
 
 After a brief initialization phase, the autonomous stack is ready to run.
 
-
-## Demonstration
-This section will cover a simple demonstration of the project on an offline test-bench.
-
-//TODO: mettere un bag pubblico, le mappe e due istruzioni su rviz.
-
 ## Troubleshooting
 If you encounter any issues during the build or run process, you can refer to the [ROS2 Troubleshooting Guide](https://docs.ros.org/en/foxy/Troubleshooting.html) for common solutions.
 
