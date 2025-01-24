@@ -61,10 +61,10 @@ Source the workspace-specific setup script
 source install/setup.bash
 ```
 
-To launch a basic trajectory-following demo, use `kitt_pp.launch.py`. You can change
+To launch a basic trajectory-following demo, use `kitt_pp.launch.xml`.
 
 ```bash
-ros2 launch kitt pp_global.launch.py
+ros2 launch kitt pp_global.launch.xml
 ```
 
 After a brief initialization phase, the autonomous stack is ready to run.
