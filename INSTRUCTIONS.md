@@ -70,7 +70,7 @@ ros2 launch kitt pp_global.launch.xml
 After a brief initialization phase, the autonomous stack is ready to run.
 
 ## Troubleshooting
-If you encounter any issues during the build or run process, you can refer to the [ROS2 Troubleshooting Guide](https://docs.ros.org/en/foxy/Troubleshooting.html) for common solutions.
+If you encounter any issues during the build or run process, you can refer to the [ROS2 Troubleshooting Guide](https://docs.ros.org/en/foxy/How-To-Guides/Installation-Troubleshooting.html) for common solutions.
 
 For issues specific to this project, check the repository's [issue tracker](https://github.com/hipert/unimore_roboracer/issues) for existing issues
   - If you don't find any issue describing your problem open a new issue specifying your running environment and the issues encountered.
