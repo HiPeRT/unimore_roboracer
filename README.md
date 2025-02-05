@@ -37,15 +37,21 @@ The main target platform for this project is the Roboracer research platform. Fo
 
 While the Roboracer platform is mainly based on a strict set of sensor and computer requirements, this repository mainly implements software for the following research prototypes
 
-### KITT
+### Bud and KITT
 
+<img style="margin-right: 25px; float: left; width: 125px;" src="img/bud.png"/>
 <img style="margin-right: 25px; float: left; width: 125px;" src="img/kitt.png"/>
 
-KITT is our main Roboracer-compliant vehicle, equipped with a Hokuyo UST-10LX 2D LiDAR and an NVIDIA Jetson embedded computer. The vehicle is mostly used in autonomous racing use-cases and serves as the baseline platform for our research and development efforts.
+Bud and KITT are our main Roboracer-compliant vehicles, both equipped with a Hokuyo UST-10LX 2D LiDAR and an NVIDIA Jetson embedded computer. The vehicles are mostly used in autonomous racing use-cases and serve as the baseline platform for our research and development efforts.
 
-KITT is also an educating platform used by students to learn autonomous driving concepts and it's the main vehicle deployed by HiPeRT Lab's Roboracer team in competitions.
+ We use them in a ping-pong, i.e., one of them is *frozen* and ready to race, while we use the other one to research new algorithm and sensors, still always compliant with race rules.
+
+ Currently **KITT** is the ready-to-race car, while Bud is under development.
+
+Bud and KITT are also an educating platform used by students to learn autonomous driving concepts and they are the main vehicles deployed by HiPeRT Lab's Roboracer team in competitions.
 
 ### Thundershot (Coming soon)
+
 <img style="margin-right: 25px; float: left; width: 125px;" src="img/thundershot.png"/>
 
 Thundershot is our main FPGA-based embedded research platform, which is also equipped with a Hokuyo UST-10LX 2D LiDAR. It is based on an AMD Kria KR260. We plan to release our FPGA implementation of a 2D lidar localization pipeline.
