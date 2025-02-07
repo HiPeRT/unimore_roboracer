@@ -27,7 +27,7 @@ This is the open-source repository for the Roboracer autonomous driving project 
 </div>
 
 ## Target Hardware Platform
-The main target platform for this project is the Roboracer (formerly F1Tenth) research platform. For a complete bill of materials, building instructions and more about the platform, check out the official [Roboracer platform documentation](https://f1tenth.readthedocs.io/en/foxy_test/index.html).
+The main target platform for this project is the Roboracer research platform. For a complete bill of materials, building instructions and more about the platform, check out the official [Roboracer platform documentation](https://f1tenth.readthedocs.io/en/foxy_test/index.html).
 
 <div align=center>
 
@@ -92,7 +92,7 @@ If you use the code in this repository or our work is relevant to your research,
 </details>
 
 <details>
-<summary><a href="https://doi.org/10.1016/j.sysarc.2024.103239">GPU implementation of the Frenet Path Planner for embedded autonomous systems: A case study in the F1tenth scenario</a></summary>
+<summary><a href="https://doi.org/10.1016/j.sysarc.2024.103239">GPU implementation of the Frenet Path Planner for embedded autonomous systems: A case study in the Roboracer scenario</a></summary>
 
 ```bibtex
 @article{MUZZINI2024103239,
