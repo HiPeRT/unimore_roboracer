@@ -50,11 +50,11 @@ Bud and KITT are our main Roboracer-compliant vehicles, both equipped with a Hok
 
 Bud and KITT are also an educating platform used by students to learn autonomous driving concepts and they are the main vehicles deployed by HiPeRT Lab's Roboracer team in competitions.
 
-### Thundershot (Coming soon)
+### Thundershot
 
 <img style="margin-right: 25px; float: left; width: 125px;" src="img/thundershot.png"/>
 
-Thundershot is our main FPGA-based embedded research platform, which is also equipped with a Hokuyo UST-10LX 2D LiDAR. It is based on an AMD Kria KR260. We plan to release our FPGA implementation of a 2D lidar localization pipeline.
+Thundershot is our main FPGA-based embedded research platform, which is also equipped with a Hokuyo UST-10LX 2D LiDAR. It is based on an AMD Kria KR260. Currently, we support an hardware-accelerated 2D LiDAR localization pipeline in the particle_filter package. The hardware is open-sourced in the [particle_filter_hw](https://github.com/HiPeRT/particle_filter_hw)  repository.
 
 <br/>
 
