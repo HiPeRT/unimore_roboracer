@@ -43,6 +43,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(laser_geometry REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 find_package(uio_map QUIET)
 find_package(yaml-cpp REQUIRED)
@@ -146,6 +147,7 @@ ament_target_dependencies(particle_filter_node PUBLIC
     laser_geometry
     tf2
     tf2_ros
+    tf2_geometry_msgs
     adx_data
     adx_data_ros
 )

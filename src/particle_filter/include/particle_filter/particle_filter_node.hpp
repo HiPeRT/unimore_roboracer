@@ -11,7 +11,7 @@
 #include <builtin_interfaces/msg/time.hpp>
 #include <tf2_ros/transform_broadcaster.h>
 
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <adx_data_ros/adx_data_ros.hpp>
 
 
@@ -46,10 +46,10 @@ class ParticleFilterNode : public ParticleFilterT
         mNode = std::make_shared<rclcpp::Node>("particle_node");
         mTfBroadcaster = std::make_shared<tf2_ros::TransformBroadcaster>(mNode);
 
-        mNode->declare_parameter("conf_path");
+        mNode->declare_parameter("conf_path", "");
         std::string conf_path = mNode->get_parameter("conf_path").as_string();
 
-        mNode->declare_parameter("numRaysDs");
+        mNode->declare_parameter("numRaysDs", "");
         numRaysDs = mNode->get_parameter("numRaysDs").as_int();
 
         // temporary, will move to constructor
